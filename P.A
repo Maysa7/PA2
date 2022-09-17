@@ -1,0 +1,112 @@
+
+#Name: Maysa Alghamdi
+#Assignment: PA 2
+#Due Date: 09/19/2022
+
+#Honor Code Statement: I received no assistance on this assignment that 
+#violates the ethical guidelines set forth by professor and class syllabus.
+
+
+def gas_price(prev_price, new_price):
+# put the function body here
+	if new_price <= prev_price:
+	    result = "Full Tank"
+	elif new_price < prev_price*(120/100):
+	     "3/4 Tank" 
+	elif new_price < prev_price*(180/100):
+	     result = "Half Tank"
+	elif new_price < prev_price*(200/100):
+	     result = "1/4 Tank"
+	else: 
+		 result = "Go Home"
+		  
+	return result	     
+	 	     	     
+def level(num_coins, difficulty):
+	num_coins_needed = 0
+	num_coins = 0
+
+	if difficulty == "Beginner" or difficulty == "Amateur":
+	     num_coins_needed = 4
+	elif difficulty == "Intermediate" or difficulty == "Pro":
+         num_coins_needed = 6
+	elif difficulty == "Expert":
+         num_coins_needed = 8
+	elif difficulty ==  "Legendary":	
+		 num_coins_needed = 10
+          	   	
+	 # Return answer in floor division
+	return num_coins // num_coins_needed	     	     
+
+#determine suit1, suit2
+def card_game(player1_card, player2_card, tiebreak_with_card):
+	card_value1 = 0
+	suit1 = 0
+	card_value2 = 0
+	suit2 = 0
+# Calculating Player1 card value and suit number:
+	if player1_card <= 1 and player1_card <= 13:
+	    suit1 = 1
+	    card_value1 = player1_card  
+	elif player1card <=14 and player1_card <= 26:
+	    suit1 = 2
+	    (card_value1- player1_card) -13
+	elif player1_card <=27 and player1_card <= 39:
+		suit1 = 3
+		(card_value1- player1_card) - 26
+	elif player1_card <= 40 and player1_card <= 52:
+		suit1 = 4
+		(card_value1- player1_card) - 39
+		
+	return result
+	
+# Calculating Player2 card value and suit number:	
+
+	if player2_card <= 1 and player2_card <= 13:
+	    suit2 = 1
+	    card_value2 = player2_card 
+	elif player2_card <=14 and player2_card <= 26:
+	    suit2 = 2
+	    (card_value2- player2_card) -13
+	elif player2_card <=27 and player2_card <= 39:
+		suit2 = 3
+		(card_value2- player2_card) -26
+	elif player2_card <= 40 and player2_card <= 52:
+		suit2 = 4
+		(card_value2- player2_card) -39
+
+#playercard%13
+# Get cardnumber within suit
+
+player1cardnumber = 0
+player2cardnumber = 0
+card_value1 = 0
+card_value2 = 0
+card_with_higher_number = 0
+tiebreak_with_card  = 0
+card_with_lower_suit = 0
+
+if (card_value1 > card_value2) and (suit1 < suit2):
+		result = "Player 1 Wins"	
+if(card_value1 < card_value2) and (suit1 > suit2):
+		result = "Player 2 wins"
+else: 
+		result = "Tie"
+                 
+if tiebreak_with_card == True:
+		result = card_with_higher_number
+else: result = card_with_lower_suit
+result = "Tie"
+	
+if player1cardnumber > player2cardnumber:	
+	        result = "Player 1 Wins"
+elif player1cardnumber < player2cardnumber:
+	result = "Player 2 Wins"
+elif (player2cardnumber > player1cardnumber) and (player2suit < player1suit):
+	        resut = "player 2 Wins"
+else: result = "Tie"        
+
+
+
+
+
